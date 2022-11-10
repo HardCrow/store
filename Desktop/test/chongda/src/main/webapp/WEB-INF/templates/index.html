@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>web的精品课程系统的设计与实现</title>
+    <link rel="stylesheet" th:href="@{/static/css/index_work.css}">
+    <link rel="stylesheet" th:href="@{/static/css/menu.css}">
+</head>
+<body>
+<h1>登入界面</h1>
+<div class="login_box">
+    <div class="login_box_left">
+        <h1>web的精品课程系统的设计与实现</h1>
+        <h2>欢迎到来！！！</h2>
+
+        <div class="downorder">
+            <button class="order">
+                下拉菜单
+            </button>
+
+            <div class="downtext">
+                <a href="http://www.baidu.com">可以跳转其他页面</a>
+                <a href="">text2</a>
+                <a href="">text3</a>
+                <a href="">text4</a>
+            </div>
+        </div>
+
+        <form method="post" th:action="@{/verificate}">   <!-th:用于controller层 点击提交完后转到addStudentDispose ->
+            用户姓名:<input th:type="text" name="userid" placeholder="请输入账号"></br></p>
+            用户密码:<input th:type="text" name="password" placeholder="请输入密码"><br></p>
+
+            <div class="forg_code_box">
+                <input type="checkbox" id="isRememberUsername" name="isRememberUsername" value="true" tabindex="4">
+                <span>记住用户名</span>
+                <a th:href="@{/losePassword}">忘记密码</a>
+                <a th:href="@{/register}" >免费注册</a>
+            </div>
+            <input type="submit" class="login_btn" style="width:341px;cursor:pointer;" value="登录">
+        </form>
+    </div>
+</div>
+<P>
+
+</P>
+<form th:action="@{/employee}">
+    <input th:type="text" placeholder="请输入关键词">
+    <input type="submit" class="check_btn" style="width:341px;cursor:pointer;" value="搜索书籍">
+</form>
+<form th:action="@{/reach}">
+    <input th:type="text" name="empName" >
+    <input type="submit" class="check_btn" style="width:341px;cursor:pointer;" value="搜索书籍">
+</form>
+
+<!--上传用户功能 -->
+<div class="x-body">
+
+    <form action="file_test/add" method="post" enctype="multipart/form-data">
+
+        <input type="file" id="file" name="file" /> <br />
+
+        <div class="layui-form-item">
+            <button  class="layui-btn" lay-filter="add" >
+                上传
+            </button>
+        </div>
+
+    </form>
+
+</div>
+
+</div>
+</body>
+</html>

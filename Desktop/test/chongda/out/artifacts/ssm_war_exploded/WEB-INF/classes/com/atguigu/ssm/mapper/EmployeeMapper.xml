@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.ssm.mapper.EmployeeMapper">
+
+    <!--查询功能-->
+    <select id="getAllEmployee" resultType="com.atguigu.ssm.pojo.Employee">
+        select * from t_emp
+    </select>
+
+<!--插入功能-->
+<insert id="insertEmployee" parameterType="Employee">
+ INSERT INTO t_emp(emp_name,age,gender,email)VALUES(#{empName},#{age},#{gender},#{email})
+</insert>
+    <!--登入查询功能-->
+    <select id="check" resultType="com.atguigu.ssm.pojo.User">
+        select * from t_user where userid=#{userid} and password=#{password}
+</select>
+    <select id="checks" resultType="com.atguigu.ssm.pojo.User">
+        select * from t_user where userid=#{userid} and password=#{password}
+</select>
+    <!--搜索引擎功能-->
+    <select id="reach" resultType="com.atguigu.ssm.pojo.Employee">
+        select * from t_emp where emp_Name LIKE '%${empName}%'
+    </select>
+</mapper>

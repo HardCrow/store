@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+<style>
+.downorder{
+    width: 100px;
+    position: relative;
+    height: auto;
+}
+.downorder:hover a{
+    display: block;
+}
+.order{
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    font-size: 10px;
+    padding: 10px;
+    background-color:blue;
+
+}
+.order:hover{
+    background-color: rgb(17, 100, 224);
+    color: rgb(14, 13, 13);
+}
+.downtext{
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    background-color: rgb(224, 187, 22);
+    color: aliceblue;
+}
+.downtext a{
+    display: none;
+    padding: 15px;
+}
+.downtext a:hover{
+    background-color: rgb(27, 170, 111);
+    color: rgb(142, 236, 79);
+}
+</style>

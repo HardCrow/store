@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert</title>
+    <link rel="stylesheet" th:href="@{/static/css/index_work.css}">
+</head>
+<body>
+<form method="post" th:action="@{/emp}"> <!-th:用于controller层 点击提交完后转到addStudentDispose ->
+    用户姓名:<input th:type="text" name="empName"></br></p>
+    用户年龄:<input th:type="text" name="age"><br></p>
+    性别:<input th:type="text" name="gender"><br></p>
+    邮箱:<input th:type="text" name="email"><br></p>
+    <input type="submit" value="提交">
+</form>
+<button id="updateImg">更改头像</button>
+<input type="file" id="file" style="display: none">
+<div  class="img">
+    <img src="${pageScope.basePath}user/img?id=1" style="width: 50px;height:50px;border-radius: 25px;display: inline-block;background-position: center center;" alt="">
+</div>
+
+</body>
+</html>
